@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellow Mushroom Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Mellow Mushroom</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="lokasi.html">Locations</a></li>
+            <li><a href="menu.html">menu</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <h1 class="moving-text">Welcome to Mellow Mushroom</h1>
+        <p class="p">A Higher Order of Pizza</p>
+    </header>
+
+    <!-- Tambahkan testimonial di bawah hero section -->
+<section class="testimonials">
+    <h2>What Our Customers Say</h2>
+    <blockquote>
+        "pizza ini yang terenak se depok sihhh."
+        <footer>- luqman</footer>
+    </blockquote>
+    <blockquote>
+        "Best pizza I've ever had! Highly recommend the truffle oil."
+        <footer>- Jane Doe</footer>
+    </blockquote>
+    <blockquote>
+        "ini mezingggg kalian harus coba best nya sii gyss."
+        <footer>- naila.wd</footer>
+    </blockquote>
+    <blockquote>
+        "waww gila ini enak bngt ."
+        <footer>- jack</footer>
+    </blockquote>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mellow Mushroom Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Script to handle mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Menambahkan/removing kelas 'active' pada menu
+    mobileMenu.classList.toggle('active'); // Menambahkan/removing kelas 'active' pada toggle
+});
+
+    </script>
+</body>
+</html>
+
+

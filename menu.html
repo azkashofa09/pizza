@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mellow Mushroom Clone</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Mellow Mushroom</div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="span"></span>
+            <span class="span"></span>
+            <span class="span"></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="lokasi.html">Locations</a></li>
+            <li><a href="menu.html">menu</a></li>
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <header class="hero" id="hero">
+        <h1 class="moving-text"></h1>
+        <section class="menu">
+            <div class="pizza-item">
+                <img src="pizza1.jpg" alt="Pepperoni Pizza">
+                <h3>Pepperoni Pizza</h3>
+                <p>Classic pepperoni with cheese and tomato sauce.</p> 
+                <a href="https://wa.me/qr/CVLWFEYUNP5LC1" class="order-button">$12.99</a>
+            </div>
+            <div class="pizza-item">
+                <img src="top-view-pepperoni-pizza-sliced-into-six-slices-1536x1024.jpg" alt="Margherita Pizza">
+                <h3>Margherita Pizza</h3>
+                <p>Fresh mozzarella, basil, and tomato sauce.</p>
+                <a href="https://wa.me/qr/CVLWFEYUNP5LC1" class="order-button">$10.99</a>
+               
+            </div>
+        </section>
+    </header>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Mellow Mushroom Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Script to handle mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const navLinks = document.getElementById('nav-links');
+
+mobileMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active'); // Menambahkan/removing kelas 'active' pada menu
+    mobileMenu.classList.toggle('active'); // Menambahkan/removing kelas 'active' pada toggle
+});
+
+    </script>
+</body>
+</html>
+
+

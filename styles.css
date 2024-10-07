@@ -1,0 +1,253 @@
+/* Gaya umum untuk body */
+body {
+    font-family: 'Raleway', sans-serif; /* Font untuk seluruh halaman */
+    margin: 0; /* Menghilangkan margin default */
+    padding: 0; /* Menghilangkan padding default */
+    background-color: #2c3e50; /* Warna latar belakang halaman */
+    color: #fff; /* Warna teks default */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: space-between; /* Memisahkan logo dan menu */
+    align-items: center; /* Menyelaraskan item secara vertikal */
+    background-color: black; /* Latar belakang navbar dengan transparansi */
+    padding: 10px 20px; /* Padding di dalam navbar */
+    border-radius: ; /* Sudut membulat */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan untuk efek kedalaman */
+    transition: background-color 1.3s, box-shadow 1.3s; /* Transisi saat hover */
+}
+
+.nav-links {
+    display: flex; /* Menampilkan menu dalam baris */
+    gap: 15px; /* Jarak antara item menu */
+    list-style: none; /* Menghilangkan bullet pada list */
+}
+
+.nav-links li {
+    position: relative; /* Untuk posisi relatif */
+
+}
+
+.nav-links a {
+    color: #fff; /* Warna teks link */
+    text-decoration: none; /* Menghilangkan garis bawah */
+    font-size: 1rem; /* Ukuran font */
+    padding: 8px 12px; /* Padding di dalam link */
+    border-radius: 15px; /* Sudut membulat pada link */
+    transition: background-color 0.3s, color 0.3s, transform 0.2s; /* Transisi untuk efek hover */
+}
+
+.nav-links a:hover {
+    background-color: #e67e22; /* Warna latar saat hover */
+    color: #fff; /* Warna teks saat hover */
+    transform: translateY(-4px); /* Efek angkat saat hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Bayangan saat hover */
+}
+
+/* Menu toggle styles */
+.menu-toggle {
+    display: none; /* Menyembunyikan toggle menu di layar besar */
+    flex-direction: column; /* Menyusun span secara vertikal */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+}
+
+.menu-toggle .span {
+    width: 25px; /* Lebar span */
+    height: 3px; /* Tinggi span */
+    background: #fff; /* Warna latar span */
+    margin: 4px; /* Jarak antar span */
+    transition: all 0.3s; /* Transisi untuk efek saat toggle aktif */
+}
+
+.location-info {
+    color: black;
+    display: grid; /* Menampilkan menu dalam grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antara item menu */
+    padding: 20px; /* Padding di dalam section */
+    background-color: white;
+    border-radius: 10px; /* Sudut membulat */
+    padding: 15px; /* Padding di dalam item */
+    text-align: center; /* Rata tengah */
+    transition: transform 0.3s; /* Transisi untuk efek hover */
+}
+
+/* Dropdown menu styles for mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Menyembunyikan menu pada layar kecil */
+        flex-direction: column; /* Menyusun item menu secara vertikal */
+        width: 50%; /* Lebar menu sesuai layar */
+        background-color: black; /* Warna latar belakang menu */
+        position: absolute; /* Posisi absolut untuk menu dropdown */
+        top: 60px; /* Jarak dari atas */
+        left: 0; /* Jarak dari kiri */
+        padding: 10px 0; /* Padding di dalam menu */
+        z-index: 10; /* Menempatkan menu di atas elemen lain */
+        border-radius: 0; /* Menghilangkan sudut membulat */
+        transition: max-height 0.5s ease; /* Transisi untuk efek membuka menu */
+        max-height: 0; /* Mengatur tinggi maksimum awal menjadi nol */
+        overflow: hidden; /* Menghilangkan overflow saat tidak terlihat */
+    }
+
+    .nav-links.active {
+        display: flex; /* Menampilkan menu saat aktif */
+        max-height: 300px; /* Tinggi maksimum saat menu aktif */
+    }
+
+    .menu-toggle {
+        display: flex; /* Menampilkan toggle menu di layar kecil */
+    }
+
+    .menu-toggle.active .span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px); /* Rotasi untuk efek X */
+    }
+
+    .menu-toggle.active .span:nth-child(2) {
+        opacity: 0; /* Menyembunyikan span tengah */
+    }
+
+    .menu-toggle.active .span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px); /* Rotasi untuk efek X */
+    }
+
+    /* Efek hover untuk link di mobile */
+    .nav-links a:hover {
+        background-color: #e67e22; /* Warna latar saat hover */
+        color: #fff; /* Warna teks saat hover */
+        transform: scale(1.1); /* Efek memperbesar saat hover */
+    }
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('pizza1.jpg'); /* Ganti dengan path gambar yang sesuai */
+    background-size: cover; /* Ukuran gambar penuh */
+    background-position: center; /* Posisi gambar di tengah */
+    height: 100vh; /* Tinggi penuh layar */
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    flex-direction: column; /* Menyusun konten secara vertikal */
+    justify-content: center; /* Menyelaraskan konten di tengah */
+    align-items: center; /* Menyelaraskan konten di tengah */
+    text-align: center; /* Rata tengah untuk teks */
+    animation: fadeIn 1s; /* Animasi fade in untuk header */
+}
+
+/* Moving text animation */
+@keyframes moveText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.p {
+    color:black;
+}
+
+.moving-text {
+    animation: moveText 3s infinite; /* Menambahkan animasi bergerak pada teks */
+    color: white;
+}
+/* Moving text animation */
+@keyframes moveText {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.moving-text2 {
+    animation: moveText 3s infinite; /* Menambahkan animasi bergerak pada teks */
+    color: black;
+}
+
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Mulai dari transparan */
+    }
+    to {
+        opacity: 1; /* Selesai dengan penuh */
+    }
+}
+
+
+.order-button {
+    background-color: #e67e22; /* Warna tombol */
+    color: #fff; /* Warna teks tombol */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 20px; /* Sudut membulat pada tombol */
+    font-size: 1rem; /* Ukuran font */
+    cursor: pointer; /* Mengubah kursor menjadi pointer */
+    transition: background-color 0.3s, transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.order-button:hover {
+    background-color: #d35400; /* Warna tombol saat hover */
+    transform: scale(1.1); /* Efek memperbesar saat hover */
+}
+
+/* Section styles */
+section {
+    padding: 50px 20px; /* Padding untuk section */
+    text-align: center; /* Rata tengah untuk teks */
+}
+
+/* Footer styles */
+footer {
+    background-color: black; /* Warna latar belakang footer */
+    padding: 20px; /* Padding di dalam footer */
+    text-align: center; /* Rata tengah untuk teks */
+}
+
+/* Variasi CSS untuk halaman menu */
+.menu {
+    display: grid; /* Menampilkan menu dalam grid */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsif */
+    gap: 20px; /* Jarak antara item menu */
+    padding: 20px; /* Padding di dalam section */
+}
+
+/* Card untuk menu item */
+.pizza-item {
+    color: black;
+    background: white; /* Latar belakang item pizza */
+    border-radius: 10px; /* Sudut membulat */
+    padding: 15px; /* Padding di dalam item */
+    text-align: center; /* Rata tengah */
+    transition: transform 0.3s; /* Transisi untuk efek hover */
+}
+
+.pizza-item:hover {
+    transform: scale(1.05); /* Efek memperbesar saat hover */
+}
+
+.pizza-item img {
+    width: 100%; /* Mengatur lebar gambar agar penuh dalam kontainer */
+    height: auto; /* Memastikan rasio aspek gambar tetap terjaga */
+    border-radius: 10px; /* Sudut membulat pada gambar */
+}
+
+
+
+@media (max-width: 768px) {
+    .menu {
+        padding: 10px; /* Mengurangi padding pada perangkat kecil */
+    }
+    .pizza-item h3 {
+        font-size: 1.5em; /* Ukuran font judul lebih kecil */
+    }
+    .pizza-item p {
+        font-size: 1em; /* Ukuran font deskripsi lebih kecil */
+    }
+    .pizza-item span {
+        font-size: 1.2em; /* Ukuran font harga lebih kecil */
+    }
+}
+
+.testimonials {
+    background-color: #;
+}
